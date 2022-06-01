@@ -4,6 +4,8 @@ import CALENDAR from './calendar.svg'
 import ClickCounter from './ClickCounter';
 
 export const App = () => {
+
+    // const num = 1;
     
     return (<>
     <img src={IMAGE} alt="" width="300" />
