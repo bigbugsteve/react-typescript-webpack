@@ -1,6 +1,4 @@
 build
 node_modules
 .vscode/settings.json
-environments/.env.development
-environments/.env.production
-environments/.env.uat
+environments

@@ -12,6 +12,27 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
+	"Redux reducer": {
+		"prefix": "rrc",
+		"body": [
+			"//import * as actionTypes from './actions';",
+			"",
+			"const initialState = {",
+			"};",
+			"",
+			"export default function $1(state = initialState, action) {",
+			"    switch (action.type) {",
+			"        case actionTypes.{{ACTION_NAME}}:",
+			"            return {",
+			"                ...state,",
+			"                {{KEY}}: action.val,",
+			"            };",
+			"        default:",
+            "            return state;",
+			"    }",
+			"}",
+		]
+	},
 	"Custom function component": {
 		"prefix": "pfce",
 		"body": [
