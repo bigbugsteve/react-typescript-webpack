@@ -4,6 +4,7 @@ import { Suspense, lazy } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 const Contact = lazy(() => import('@src/pages/contact/index'));
+const Login = lazy(() => import('@src/pages/login/index'));
 const Home = lazy(() => import('@src/pages/index'));
 const Router = () => {
     return (
@@ -14,6 +15,13 @@ const Router = () => {
                         <Layout>
                             <Suspense fallback={<div>...Loading</div>}>
                                 <Home />
+                            </Suspense>
+                        </Layout>
+                    </Route>
+                    <Route exact path="/login">
+                        <Layout>
+                            <Suspense fallback={<div>...Loading</div>}>
+                                <Login />
                             </Suspense>
                         </Layout>
                     </Route>
