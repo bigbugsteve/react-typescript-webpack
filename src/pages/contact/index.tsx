@@ -2,7 +2,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-const Home = () => {
+const Contact = () => {
     /* STATES */
 
     /* VARIABLES */
@@ -10,14 +10,12 @@ const Home = () => {
 
     /* FUNCTIONS */
 
-    /* API FUNCTIONS */
-
     /* USEEFFECTS */
 
-    return <>Hello home</>;
+    return <>Contact page</>;
 };
 
-export default Home;
+export default Contact;
 
 // export default reduxForm({
 //     form: '{{form}}',

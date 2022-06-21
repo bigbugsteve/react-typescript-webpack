@@ -2,7 +2,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-const Home = () => {
+const Layout = ({ children }) => {
     /* STATES */
 
     /* VARIABLES */
@@ -10,14 +10,12 @@ const Home = () => {
 
     /* FUNCTIONS */
 
-    /* API FUNCTIONS */
-
     /* USEEFFECTS */
 
-    return <>Hello home</>;
+    return <div className="layout">{children}</div>;
 };
 
-export default Home;
+export default Layout;
 
 // export default reduxForm({
 //     form: '{{form}}',

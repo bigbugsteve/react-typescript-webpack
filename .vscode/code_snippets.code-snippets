@@ -37,6 +37,7 @@
 		"prefix": "mcfc",
 		"body": [
 			"// import { reduxForm } from 'redux-form';",
+			"import React from 'react",
 			"import { useTranslation } from 'react-i18next';",
 			"",
 			"const $1 = () => {",
@@ -70,6 +71,7 @@
 	"Custom function component": {
 		"prefix": "cfce",
 		"body": [
+			"import React from 'react",
 			"// import { reduxForm } from 'redux-form';",
 			"import { useTranslation } from 'react-i18next';",
 			"",

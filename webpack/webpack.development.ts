@@ -6,7 +6,8 @@ module.exports = (envVars) => {
     return {
         mode: 'development',
         devServer: {
-            static: path.join(__dirname, '..', 'public'),
+            static: path.join(__dirname, '..', 'public'),            
+            historyApiFallback: true,
             port: 3001,
             hot: true,
             open: true,

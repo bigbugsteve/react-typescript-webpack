@@ -1,29 +1,33 @@
-// import { reduxForm } from 'redux-form';
-import { useTranslation } from 'react-i18next';
+import React from 'react';
+import Layout from '@src/components/layout/layout';
+import { Suspense, lazy } from 'react';
+import { Route, Switch } from 'react-router-dom';
 
-const  = () => {
-
-    /* ======== STATES ======== */
-
-    /* ======== VARIABLES ======== */
-    const { t } = useTranslation('common');
-
-    /* ======== FUNCTIONS ======== */ 
-
-    /* ======== API FUNCTIONS ======== */ 
-
-    /* ======== USEEFFECTS ======== */
-
+const Contact = lazy(() => import('@src/pages/contact/index'));
+const Home = lazy(() => import('@src/pages/index'));
+const Router = () => {
     return (
-    <></>
-   )
-}
+        <>
+            <Suspense>
+                <Switch>
+                    <Route exact path="/">
+                        <Layout>
+                            <Suspense fallback={<div>...Loading</div>}>
+                                <Home />
+                            </Suspense>
+                        </Layout>
+                    </Route>
+                    <Route exact path="/contact">
+                        <Layout>
+                            <Suspense fallback={<div>...Loading</div>}>
+                                <Contact />
+                            </Suspense>
+                        </Layout>
+                    </Route>
+                </Switch>
+            </Suspense>
+        </>
+    );
+};
 
-export default 
-
-// export default reduxForm({
-//     form: '{{form}}',
-//     destroyOnUnmount: false,
-//     forceUnregisterOnUnmount: true,
-//     touchOnBlur: false
-// })(index)
+export default Router;

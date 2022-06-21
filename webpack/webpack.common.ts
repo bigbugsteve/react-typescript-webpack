@@ -9,6 +9,11 @@ module.exports = (envVars) => {
     entry: path.resolve(__dirname, '..', './src/index.tsx'),
     resolve: {
       extensions: ['.tsx', '.ts', '.js'],
+      alias: {
+        '@src': path.join(__dirname, '..', './src'),
+        '@pages': path.join(__dirname, '..', './src/pages'),
+        '@redux': path.join(__dirname, '..', './src/redux'),
+      }
     },
     module: {
       rules: [

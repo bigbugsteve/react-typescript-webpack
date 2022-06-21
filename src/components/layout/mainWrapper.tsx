@@ -2,7 +2,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-const Home = () => {
+const MainWrapper = ({ children }) => {
     /* STATES */
 
     /* VARIABLES */
@@ -14,10 +14,10 @@ const Home = () => {
 
     /* USEEFFECTS */
 
-    return <>Hello home</>;
+    return <main className="main-wrapper">{children}</main>;
 };
 
-export default Home;
+export default MainWrapper;
 
 // export default reduxForm({
 //     form: '{{form}}',
