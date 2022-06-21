@@ -1,1 +1,18 @@
-{}
+{
+    "home": {
+        "title": "Home"
+    },
+    "navigation": {
+        "home": "Home"
+    },
+    "footer": {
+        "contact": "Contact"
+    },
+    "contact": {
+        "email": "E-mail",
+        "phone": "Phone number"
+    },
+    "dashboard": {
+        "title": "Dashboard"
+    }
+}

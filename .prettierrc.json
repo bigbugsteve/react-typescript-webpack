@@ -6,7 +6,10 @@
     "trailingComma": "all",
     "semi": true,
     "endOfLine": "auto",
-    "importOrder": ["^[./]", "^@src/(.*)$"],
+    "importOrder": [
+        "^[./]",
+        "^@src/(.*)$"
+    ],
     "importOrderSeparation": true,
     "importOrderSortSpecifiers": true
 }
