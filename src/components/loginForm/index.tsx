@@ -1,10 +1,17 @@
-import { Button, Checkbox, FormControlLabel, TextField } from '@mui/material';
+import { Button, Box, Checkbox, FormControlLabel, TextField } from '@mui/material';
 import React from 'react';
-import { reduxForm, Field } from 'redux-form';
+
+// import Box from '@mui/material/Box';
+import { InjectedFormProps, reduxForm, Field } from 'redux-form';
 import { useTranslation } from 'react-i18next';
 import renderTextField from '../form/TextField';
 import { required } from 'redux-form-validators';
-const LoginForm = () => {
+
+interface LoginFormProps {
+    performLogin: () => void;
+}
+
+const LoginForm: React.FC<LoginFormProps & InjectedFormProps<FormData, LoginFormProps>> = ({ performLogin }) => {
     /* STATES */
 
     /* VARIABLES */
@@ -15,7 +22,7 @@ const LoginForm = () => {
     /* USEEFFECTS */
 
     return (
-        <form className={''}>
+        <form className={'login-form'}>
             <Field
                 name="username"
                 component={renderTextField}
@@ -24,19 +31,14 @@ const LoginForm = () => {
                 label={t('login.username')}
                 // disabled={isFirstStepCompleted}
             />
-            <TextField
-                name="insta"
-                variant="outlined"
-                fullWidth
-                id="insta"
-                label="Instagram profile"
-                //   InputLabelProps={{ shrink: insta }}
-                //   onFocus={handleFocus}
+            <Field
+                name="password"
+                component={renderTextField}
+                type="password"
+                validate={[required({ msg: t('validations.required') })]}
+                label={t('login.username')}
+                // disabled={isFirstStepCompleted}
             />
-            <TextField variant="outlined" required fullWidth id="lastName" label="Last Name" name="lastName" autoComplete="lname" />
-            <TextField variant="outlined" required fullWidth id="email" label="Email Address" name="email" autoComplete="email" />
-            <TextField variant="outlined" required fullWidth name="password" label="Password" type="password" id="password" autoComplete="current-password" />
-            <FormControlLabel control={<Checkbox value="allowExtraEmails" color="primary" />} label="I want to receive inspiration, marketing promotions and updates via email." />
             <Button
                 type="submit"
                 fullWidth
@@ -44,7 +46,7 @@ const LoginForm = () => {
                 color="primary"
                 //   className={classes.submit}
             >
-                Sign Up
+                {t('login.login')}
             </Button>
         </form>
     );

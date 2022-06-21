@@ -3,7 +3,10 @@
         "title": "Home"
     },
     "login": {
-        "username": "Username"
+        "login": "Login",
+        "username": "Username",
+        "password": "Password",
+        "forgotten": "Forgotten password?"
     },
     "navigation": {
         "home": "Home"

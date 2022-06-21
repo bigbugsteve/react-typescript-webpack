@@ -33,7 +33,7 @@ const Login = () => {
 
     return (
         <>
-            <LoginForm />
+            <LoginForm performLogin={performLogin} />
             {/* <Button variant="contained">Hello World</Button> */}
         </>
     );
