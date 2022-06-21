@@ -1,5 +1,5 @@
 import axiosInstance from '../http/axiosSetup';
-import cookie from 'react-cookies'
+import cookie from 'react-cookies';
 export default class AuthService {
     static performLogin = (body) =>
         axiosInstance

@@ -2,6 +2,8 @@
 import AuthService from '@src/api/services/authService';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import Button from '@mui/material/Button';
+import LoginForm from '@src/components/loginForm';
 
 const Login = () => {
     /* STATES */
@@ -31,7 +33,8 @@ const Login = () => {
 
     return (
         <>
-            <button onClick={login}>Login</button>
+            <LoginForm />
+            {/* <Button variant="contained">Hello World</Button> */}
         </>
     );
 };

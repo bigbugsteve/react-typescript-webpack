@@ -2,6 +2,9 @@
     "home": {
         "title": "Home"
     },
+    "login": {
+        "username": "Username"
+    },
     "navigation": {
         "home": "Home"
     },
@@ -14,5 +17,8 @@
     },
     "dashboard": {
         "title": "Dashboard"
+    },
+    "validations": {
+        "required": "This field is required"
     }
 }

@@ -14,7 +14,7 @@ const Home = () => {
 
     /* USEEFFECTS */
 
-    return <div className="homapage">home Page</div>;
+    return <div className="homapage">Home Page</div>;
 };
 
 export default Home;

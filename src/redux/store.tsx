@@ -11,10 +11,12 @@ const reducer = combineReducers({
 const logger = (store) => {
     return (next) => {
         return (action) => {
+            // if (action.type === '@@redux-form/CHANGE') {
             console.log('%c[Middleware] Dispatching', 'color: #ff4000', action);
             const result = next(action);
             console.log('%c[Middleware] next state', 'color: #4d9900', store.getState());
             return result;
+            // }
         };
     };
 };
