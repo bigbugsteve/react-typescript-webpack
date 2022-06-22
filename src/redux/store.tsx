@@ -11,12 +11,18 @@ const reducer = combineReducers({
 const logger = (store) => {
     return (next) => {
         return (action) => {
-            // if (action.type === '@@redux-form/CHANGE') {
-            console.log('%c[Middleware] Dispatching', 'color: #ff4000', action);
+            if (action.type === '@@redux-form/CHANGE') {
+                console.log('%c[Middleware] Dispatching %c@change', 'color: #0060E3', 'color: #00B80E', action);
+            }
+            if (action.type === '@@redux-form/BLUR') {
+                console.log('%c[Middleware] Dispatching %c@blur', 'color: #0060E3', 'color: #DE7506', action);
+            }
+            if (action.type === '@@redux-form/UPDATE_SYNC_ERRORS') {
+                console.log('%c[Middleware] Dispatching %c@error', 'color: #0060E3', 'color: #DE0606', action);
+            }
             const result = next(action);
             console.log('%c[Middleware] next state', 'color: #4d9900', store.getState());
             return result;
-            // }
         };
     };
 };
