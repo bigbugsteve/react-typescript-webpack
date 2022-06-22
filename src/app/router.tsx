@@ -14,7 +14,9 @@ const Router = () => {
                     <Route exact path="/">
                         <Layout>
                             <Suspense fallback={<div>...Loading</div>}>
-                                <Home />
+                                <>
+                                    <Home />
+                                </>
                             </Suspense>
                         </Layout>
                     </Route>

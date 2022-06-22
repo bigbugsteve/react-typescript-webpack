@@ -10,9 +10,8 @@ module.exports = (envVars) => {
     resolve: {
       extensions: ['.tsx', '.ts', '.js'],
       alias: {
-        '@src': path.join(__dirname, '..', './src'),
-        '@pages': path.join(__dirname, '..', './src/pages'),
-        '@redux': path.join(__dirname, '..', './src/redux'),
+        '@src': path.join(__dirname, '..', 'src'),
+        '@MyComponents': path.join(__dirname, '..', 'src/components/index.tsx'),
       }
     },
     module: {
